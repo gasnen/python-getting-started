@@ -19,6 +19,4 @@ urlpatterns = [
     # path("administracion", administracion.views.index, name="index"),
     path("db/", hello.views.db, name="db"),
     path("admin/", admin.site.urls),
-    path("adm/", include("administr.urls")),
-    path("a2/", include("administr.urls")),
 ]
