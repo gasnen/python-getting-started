@@ -1,0 +1,498 @@
+.textBox {
+	height: 17px; 
+	padding: 1px 1px 1px 2px; 
+	margin: 0;
+	border:1px solid #CCC; 
+	font-family:sans-serif; 
+	color:black; 
+	font-size:1em; 
+	font-weight:normal;
+}
+ .squaredbuttons {
+ 	height: 20px;
+ 	width: 20px;
+ 	font-size: 1em !important;
+ 	font-weight:normal !important;
+ 	padding: 0px !important;
+ 	margin: 0;
+ }
+
+.checkBox {
+	padding:4px;
+	margin: 4px;
+	vertical-align:middle;
+}
+.buttons {
+ 	height: 21px;
+    width: 125px;
+ 	font-size: 11px !important;
+ 	margin: 0px !important;
+ 	
+ }
+ 
+ .ui-dialog .ui-dialog-buttonpane {
+	text-align: center !important;
+	border-width: 1px 0 0 0;
+	background-image: none;
+	margin-top: .5em;
+	padding: .3em 1em .5em .4em;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+	float: none !important;
+}
+
+.ui-dialog .ui-dialog-buttonpane button {
+  margin: .5em .4em .5em 0;
+  cursor: pointer;
+  color: white; 
+  background:#2E6E9E !important;
+    
+}
+.ui-autocomplete {
+  
+	position: absolute !important;
+	height: 250px!important;
+    width: 250px !important;
+    overflow-y: auto!important;
+    overflow-x: auto !important;
+ 	display: inline;
+	
+}
+
+/* IE 6 doesn't support max-height
+ * we use height instead, but this forces the menu to always be this tall
+ */
+
+ 
+ 
+input.buttonsDisabled {
+	background:#888888;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 1em !important;
+	color:#FFF;
+	font-weight:normal;
+	text-decoration:none;
+	border:none;
+	height: 21px;
+ 	width: 80px;
+ 	font-size: 11px !important;
+ 	
+}
+ 
+ 
+.even td {
+  background-color: #EEE;
+  margin-bottom: 8em !important;
+}
+
+.even {
+	height: 24px;
+}
+
+.searchFieldsTable {
+	border:0;
+}
+.searchFieldsTable tr td {
+	height:20px !important;
+	vertical-align:middle;
+	border:0;
+}
+
+.formFont {
+	display: inline;
+	white-space: nowrap;
+	font-weight: normal;
+	color: #336CA2;
+	font-family: AntennaCondBold, sans-serif;
+	font-size: 1em;
+}
+
+.formLabelFont {
+
+font-size:0.75em !important;
+
+}
+.noBreaks {
+	display:inline;
+	white-space:nowrap;
+}
+
+.innerLabelForm_row {
+	padding: 0;
+	margin: 0;
+	
+}
+
+.topLabelForm_col {
+	display: inline;
+	float: left;
+	padding-right: 2em;
+}
+input:disabled {
+/*background:grey;*/
+	background-color: #EEEEEE;
+}
+
+.claseProveedor {
+	width:85px !important;
+}
+.codigoProveedor {
+	width:85px !important;
+}
+.nombreProveedor {
+	width:480px !important;
+}
+
+.colItems {
+	width: 350px !important;
+}
+.colEconomics {
+	width: 350px !important;
+}
+.colLevelNames {
+	width:110px;
+}
+.dateEvol {
+	width:30px;
+	height: 17px !important; 
+	padding: 1px 1px 1px 2px !important; 
+	margin: 0 !important;
+}
+
+.percentage, .req, .percentageTotal, .percReq {
+	height: 17px !important; 
+	padding: 1px 1px 1px 2px !important; 
+}
+.percentage, .percentageTotal, .percReq {
+	width:46px !important;
+	text-align:right;
+}
+.percentageBig {
+	width:80px !important;
+	text-align:right;
+}
+
+.percentage, .req, .percentageTotal {
+	height: 17px !important; 
+	padding: 1px 1px 1px 2px !important; 
+}
+.percentage, .percentageTotal {
+	width:46px !important;
+	text-align:right;
+}
+.percentageBig {
+	width:80px !important;
+	text-align:right;
+}
+.req {
+	width:75px;
+}
+.items {
+	width:350px;
+}
+.economics {
+	width:350px;
+}
+.treeTable {
+	table-layout: fixed !important;
+}
+.treeTable .level1 td {
+	background: #B2C6D9 !important;
+	
+}
+.treeTable .level0 td {
+	background: white !important;
+	text-align: left;
+}
+.treeTable .level2 td {
+	background: #EEE !important;
+}
+.treeTable td {
+	border-style: none !important; 
+	text-align: center;
+	padding: 1px 1px 1px 1px !important;
+}
+.subTotal {
+	background: #B2C6D9 !important;
+	border-style:none !important;
+}
+
+.formLegend {
+	font-weight: bold !important;
+	font-size: 12px !important;
+}
+
+.fullEconomicsTable th {
+	border-color: black !important;
+}
+.fullEconomicsTable td {
+	padding:0px !important;
+}
+.columnCostBreak {
+
+}
+.columnCostBreak, .columnEconLevel {
+	border-style:none !important;
+}
+.columnLastCS1, .columnFULLEE1 {
+	border-left-width:2px;
+	border-left-style:solid;
+	border-right-style:none;
+	border-left-color:black !important;
+}
+.columnCostBreak, .columnEconLevel,  .columnLastCS1, .columnLastCS2, .columnSupplierReq1, .columnSupplierReq2 {
+	background:white !important;
+}
+
+.columnSupplierReq1 {
+	border-right-style:none;
+}
+.columnSupplierReq2 {
+	border-left-style:none;
+}
+.columnSupplierReq1, .columnLastCS1, .columnFULLEE1 {
+	width:50px !important;
+	text-align:center !important;
+}
+.columnSupplierReq2, .columnLastCS2, .columnFULLEE2, .columnFORDPOLICY2 {
+	width:85px !important;
+	text-align:right !important;
+}
+
+
+.columnFULLEE2,.columnFORDPOLICY2, .columnFORDNEG2, .columnLastCS2{
+	border-right-width:2px;
+	border-right-style:solid;
+	border-right-color:black !important;
+	border-left-style:none;
+}
+.columnFORDPOLICY1 {
+ 	border-right-style:none;
+ 	width:62px !important;
+ 	text-align:center !important;
+ 	
+}
+
+.columnFORDPOLICY2 {
+	border-left-style:none;
+}
+.columnFORDNEG1 {
+	border-right-style:none;
+	width:60px !important;
+}
+.columnFORDNEG2 {
+	width:80px !important;
+	border-left-style:none;
+}
+.columnFULLEE1, .columnFULLEE2, .columnFORDPOLICY1, .columnFORDPOLICY2  {
+	background: #FFFFB9 !important;
+}
+.columnFORDNEG1, .columnFORDNEG2 {
+	background: #CCFFCC !important;
+}
+.columnIndexFromTo {
+	width: 120px;
+}
+.subTotalFE {
+   	border-bottom-style: none;
+	border-top-width:2px;
+   	border-top-style: solid;
+   	border-top-color:black !important;
+}
+
+.totalFE {
+	font-weight:bold;
+   	border-bottom-style: solid;
+	border-bottom-width:2px;
+	border-top-width:2px;
+   	border-top-style: solid;
+   	border-bottom-color:black !important;
+   	border-top-color:black !important;
+}
+
+.headerTableFE th {
+	border-style:solid !important; border-color:black !important; background:#3A5876 !important;
+}
+.comboBox {
+	text-align:left;
+}
+.categoryTitle {
+	border-style:solid !important;
+	border-width:2px;
+}
+.negative { color:red;}
+.nonEditableFordNeg {
+	border-style:none;
+	background: #CCFFCC !important;
+}
+.topBorder {
+	border-top-style:solid;
+	border-top-width:2px;
+	border-top-color:black;
+}
+.bottomBorder {
+	border-bottom-style:solid;
+	border-bottom-width:2px;
+	border-bottom-color:black;
+}
+
+#nav li {/* 1st level and below list items in NavMenu */
+	width:150px !important;
+	text-align:center !important;
+}
+
+#nav {
+	font-size: 14px !important;
+}
+
+#nav ul {
+	width:150px !important;
+}
+
+#nav ul ul {
+	left: 10.7em !important;
+}
+
+#tooltipContent{
+    display: none;
+}
+.ui-tooltip {
+	margin: 0 !important;
+	padding: 0 !important;
+	border-color: black !important;
+}
+.ui-tooltip-content {
+	background: #3A5876;
+	color: white;
+	padding: 0;
+
+}
+.tooltipEconomic {
+	color: black !important;
+	text-decoration: none !important;
+}
+.tooltipNeogciado {
+	color: black !important;
+	text-decoration: none !important;
+}
+
+a.tooltipNeogciado {
+	
+	text-decoration: none !important;
+}
+
+
+
+
+.gapSelected {
+	background:#f5f8f9;
+	color:#e17009;
+	border-color:#2E6E9E;
+	border-style:solid; 
+	border-bottom-style:none !important;
+	border-width:1px;
+	border-right-width:2px !important;
+	text-align:center;
+	width:70px !important;
+	
+	
+}
+.gapNonSelected {
+	background: #dfeffc;
+	color: #2e6e9e;
+	border-style:solid !important; 
+	border-width:1px;
+	border-left-width:2px;
+	border-right-color: #2E6E9E !important;
+	text-align:center;
+	width:100px !important;
+}
+#tableNDPCnew {
+	border-style:solid;
+	border-top-style:none !important; 
+	border-right-style:none !important; 
+	border-color:#2E6E9E;
+}
+#tableNDPCnew td {
+	background:#f5f8f9 !important;
+}
+#tableNDPCnew td{
+	background:#f5f8f9 !important;
+}
+.innerTableNDPCnew {
+	border-style:none !important;
+}
+.innerTableNDPCnew td{
+	background:#f5f8f9 !important;
+	border-style:none !important;
+	
+}
+.invisibleNDPC {
+	background:#F4F4F4;
+	border-bottom-color:#2E6E9E;
+	border-bottom-width:1px !important;
+	border-bottom-style: solid !important;
+	border-left-color:#2E6E9E !important;
+	border-left-width:1px !important;
+	border-left-style: solid !important;
+	border-right-style: none !important;
+}
+#generalTableNDPCnew {
+	border-color:#2E6E9E;
+	border-style:solid;
+	border-width:1px;
+}
+.celdasRubrosNDPC {
+	padding-left:5px;
+	background:#3A5876 !important; 
+	color:#e17009;
+}
+#loading-image-true {
+	float:right;
+	text-align:right;
+	display:none;
+}
+#loading-image-macropieza, #loading-image-filtraPiezas{
+	float:right;
+	text-align:right;
+	display:none;
+}
+.ui-multiselect input.search {
+	background: #ffffff !important;
+	color: black !important;
+}
+.ui-element {
+	background: #ffffff !important;
+	color: black !important;
+}
+
+#waiting_wrapper {
+height: 100%;
+left: 0;
+margin: 0;
+padding: 0;
+position: absolute;
+text-align: center;
+top: 0;
+width: 100%;
+z-index: 10000;
+}
+
+#waiting_screen {
+/* background-color: #000; */
+float: left;
+height: 100%;
+margin: 0;
+padding: 0;
+width: 100%;
+}
+
+#waiting_content {
+background: #FFF;
+border: 5px solid #346;
+border-radius: 9px;
+box-shadow: 0 0 200px #333;
+padding: 1em 1.75em 0 1.75em;
+position: absolute;
+text-align: left;
+}

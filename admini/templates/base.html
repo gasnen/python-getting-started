@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+    <title>{% block title %}Hi{% endblock %}</title>
+    <link href="{% static 'Administracion/fullee.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'Administracion/FUIL.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'Administracion/stylesfe.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'Administracion/styles.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'Administracion/modal.css' %}" rel="stylesheet" type="text/css"> 
+    <link href="{% static 'Administracion/masking-input.css' %}" rel="stylesheet" type="text/css"> 
+        {% block head %}
+        {% endblock %}
+</head>
+<body>
+    <div id="pid">  
+    <div id="section01">
+        <div id="navcontainer">
+            <ul id="nav">
+             {% for menuline in menu %}
+                {% if menuline.istypeli %}
+                    <li><a href="{{menuline.gethref}}"  class="{{menuline.class}}"">{{menuline.getdesc}}</a>
+                {% elif menuline.istypeliclose%}
+                    </li>
+                {% elif menuline.istypeulopen %}
+                    <ul>    
+                {% elif menuline.istypeulclose %}
+                    </ul>
+                {% endif %}
+             {% endfor %}
+  
+            </ul>
+        </div>
+            
+    </div>
+        <!-- [END] #sectionXX -->
+        </div>
+        <!-- [END] #navPrimaryWrapper -->
+        </div>
+    {% block a %}
+    {% endblock %}
+    {% block b %}
+    {% endblock %}
+    </div>
+    </body>

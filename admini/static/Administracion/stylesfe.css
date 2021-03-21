@@ -1,0 +1,1902 @@
+﻿/*
+Master Sheet Cascading Style Sheet (CSS)
+Important Notes:
+	- Send all change requests to CDU
+*/
+
+/*	[START] Fonts
+	This CSS resource incorporates links to font software which is the valuable copyrighted property of WebType LLC, The Font Bureau, Ascender Corporation and/or their suppliers. You may not attempt to copy, install, redistribute, convert, modify or reverse engineer this font software. Please contact WebType with any questions: http://www.webtype.com 
+*/
+@font-face {	/* Antenna Bold */
+	font-family: AntennaBold;
+	src: url("../fonts/85bf2123-24cb-4bfd-a720-efe63c68c84d-2.eot"); /*IE9*/
+	src: local('☺'),
+		url("../fonts/85bf2123-24cb-4bfd-a720-efe63c68c84d-2.eot?#iefix") format("embedded-opentype"), /*IE6-IE8*/
+		url("../fonts/85bf2123-24cb-4bfd-a720-efe63c68c84d-3.woff") format("woff"), /*Modern Browsers*/
+		url("../fonts/85bf2123-24cb-4bfd-a720-efe63c68c84d-1.ttf") format("truetype"), /*Safari, Android, iOS*/
+		url("../fonts/85bf2123-24cb-4bfd-a720-efe63c68c84d-4.svg#web") format("svg"); /*Legacy iOS*/
+}
+@font-face {	/* Antenna Medium */
+	font-family: AntennaMedium;
+	src: url("../fonts/c03da8b6-e888-4718-9c24-e25cc55c95d7-2.eot");
+	src: local('☺'),
+		url("../fonts/c03da8b6-e888-4718-9c24-e25cc55c95d7-2.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/c03da8b6-e888-4718-9c24-e25cc55c95d7-3.woff") format("woff"),
+		url("../fonts/c03da8b6-e888-4718-9c24-e25cc55c95d7-1.ttf") format("truetype"),
+		url("../fonts/c03da8b6-e888-4718-9c24-e25cc55c95d7-4.svg#web") format("svg");
+}
+@font-face {	/* Antenna */
+	font-family: Antenna;
+	src: url("../fonts/a249ec5c-51a0-4581-a866-722ded577e7d-2.eot");
+	src: local('☺'),
+		url("../fonts/a249ec5c-51a0-4581-a866-722ded577e7d-2.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/a249ec5c-51a0-4581-a866-722ded577e7d-3.woff") format("woff"),
+		url("../fonts/a249ec5c-51a0-4581-a866-722ded577e7d-1.ttf") format("truetype"),
+		url("../fonts/a249ec5c-51a0-4581-a866-722ded577e7d-4.svg#web") format("svg");
+}
+@font-face {	/* Antenna Condensed Bold */
+	font-family: "AntennaCondBold";
+	src: url("../fonts/11003427-bdd6-432a-9edc-cdbe214ee6c8-2.eot");
+	src: local('☺'),
+		url("../fonts/11003427-bdd6-432a-9edc-cdbe214ee6c8-2.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/11003427-bdd6-432a-9edc-cdbe214ee6c8-3.woff") format("woff"),
+		url("../fonts/11003427-bdd6-432a-9edc-cdbe214ee6c8-1.ttf") format("truetype"),
+		url("../fonts/11003427-bdd6-432a-9edc-cdbe214ee6c8-4.svg#web") format("svg");
+}
+@font-face {	/* Antenna Condensed Medium */
+	font-family: "AntennaCondMedium";
+	src: url("../fonts/5c6f660d-245c-414f-afcb-9d45671d7abf-2.eot");
+	src: local('☺'),
+		url("../fonts/5c6f660d-245c-414f-afcb-9d45671d7abf-2.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/5c6f660d-245c-414f-afcb-9d45671d7abf-3.woff") format("woff"),
+		url("../fonts/5c6f660d-245c-414f-afcb-9d45671d7abf-1.ttf") format("truetype"),
+		url("../fonts/5c6f660d-245c-414f-afcb-9d45671d7abf-4.svg#web") format("svg");
+}
+@font-face {	/* Antenna Condensed */
+	font-family: "AntennaCond";
+	src: url("../fonts/bcfbac2e-f002-4b94-9f14-a4d9b3fcd21c-2.eot");
+	src: local('☺'),
+		url("../fonts/bcfbac2e-f002-4b94-9f14-a4d9b3fcd21c-2.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/bcfbac2e-f002-4b94-9f14-a4d9b3fcd21c-3.woff") format("woff"),
+		url("../fonts/bcfbac2e-f002-4b94-9f14-a4d9b3fcd21c-1.ttf") format("truetype"),
+		url("../fonts/bcfbac2e-f002-4b94-9f14-a4d9b3fcd21c-4.svg#web") format("svg");
+}
+/* [END] Fonts */
+
+/* [START] Base HTML */
+html * {
+	/* margin: 1px; */
+	/* padding: 10px; */
+}
+
+body {
+	background: #F4F4F4;
+	color: #333;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 75%; /* 75% = default font size of 12px. 68.75% = default font size of 11px. 62.5% = default font size of 10px (10px is not recommended for Trebuchet). */
+	height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	display: block;
+	font-weight: normal;
+	margin-bottom: .25em;
+	width: auto;
+}
+h1 {
+	font-family: AntennaCondMedium, sans-serif;
+	font-size: 266.66666666666666%;
+}
+h2 {
+	color: #336CA2;
+	font-family: AntennaCondBold, sans-serif;
+	font-size: 200%;
+}
+h3 {
+	color: #777;
+	font-family: AntennaCondBold, sans-serif;
+	font-size: 166.66666666666666%;
+}
+h4 {
+	color: #444;
+	font-family: AntennaCondBold, sans-serif;
+	font-size: 133.33333333333333%;
+}
+h5 {
+	border-bottom: 1px solid;
+	color: #666;
+	font-family: AntennaBold, sans-serif;
+	font-size: 116.66666666666666%;
+	margin-bottom: .5em;
+}
+h6 {
+	font-family: AntennaBold, sans-serif;
+	font-size: 108.33333333333333%;
+}
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong,
+h5 strong,
+h6 strong {
+	font-family: AntennaBold, sans-serif;
+	font-weight: normal;
+}
+p {
+	clear: both;
+	padding: 0 0 .75em 0;
+}
+dd {
+	font-weight: normal;
+}
+ul {
+	padding-left: 1.5em;
+}
+li {
+	padding: 0 0 .5em 0;
+}
+img {
+	border: 0;
+}
+a,
+a:link,
+a:visited {
+	color: #336ca2;
+}
+a:hover,
+a:focus {
+	text-decoration: none;
+}
+a:focus { 
+	outline: 1px dotted gray; 
+}
+input,
+select,
+textarea {
+	background: #fff;
+	border: 1px solid #AAA;
+	border-radius: 3px;
+	color: #333;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; /* Sets the font for form inputs */
+	font-size: 100%; /* Needs to be 100% in order to inherit the font-size from the body tag */
+	padding: 3px;
+	resize: none;
+}
+input[type=radio],
+input[type=checkbox] {
+	background: none;
+	border: none;
+	padding: 0;
+}
+option {
+	padding: 0 1em 0 .5em;
+}
+table {
+	background: #FFF;
+	border-color: #CCC;
+	border-collapse: collapse;
+	border-radius: 5px;
+	border-style: solid;
+	clear: both;
+	float: none;
+	margin: 0 0 .25em 0;
+	width: 100%;
+}
+table img {
+	margin-right: .5em;
+}
+th {
+	background: #79B;
+	color: #fff;
+	font-size: 110%;
+	padding: .4em .4em .5em;
+}
+th a,
+th a:link,
+th a:visited {
+	color: #EEE;
+}
+td {
+	background: #FFF;
+	border-right: 1px solid #CCC;
+	padding: .2em .5em;
+}
+
+td input {
+	margin: .5em 0;
+}
+/* [END] Base HTML */
+
+/* [START] Layout */
+#app-header {
+	padding: 0 2em;
+}
+#stickyFooterFix {
+	min-height: 100%;
+	overflow: visible;
+}
+#page {
+	padding: 1em 2em 62px 2em; /* bottom padding must be same height as height + padding of #app-footer */
+}
+.section {
+	clear: both;
+	float: none;
+	padding: 0 0 1em 0;
+}
+#page-footer {
+	background: #DDD;
+	border-color: #CCC;
+	border-radius: 5px;
+	border-style: solid;
+	margin: 0 2em 2em;
+	padding: 1em 1em 0 1em;
+}
+#page-footer p {
+	color: #666;
+}
+#app-footer {
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#DDDDDD, endColorstr=#FFFFFF);	/* IE 6+ */
+	background-image: -webkit-linear-gradient(top, #DDD, #FFF); /* Safari 5.1+, Mobile Safari, Chrome 10+ */
+	background-image: -moz-linear-gradient(top, #DDD, #FFF);	/* Firefox 3.6+ */
+	background-image: -o-linear-gradient(top, #DDD, #FFF);		/* Opera 11.10+ */
+	clear: both;
+	height: 50px;
+	margin-top: -62px; /* negative value height + padding of #app-footer */
+	padding: 0.5em;
+	position: relative;
+	text-align: center;
+}
+#app-footer p {
+	margin: 0;
+	padding-bottom: 0.5em;
+}
+/* Columns */
+.columnContainer {
+	clear: both;
+	float: none;
+}
+.equalHeightCols {
+	border-spacing: 1em 0;
+	display: table;
+	margin-bottom: 1em;
+	margin-left: -1em;
+	margin-right: -1em;
+}
+.equalHeightCols div {
+	background: #DDD;
+	display: table-cell;
+	float: none !important;
+	padding: 1em;
+}
+.col50_L {
+	width: 49%;
+	float: left;
+}
+.col50_L .inner {
+	padding: 0;
+}
+.col50_R {
+	width: 49%;
+	float: right;
+}
+.col50_R .inner {
+	padding: 0;
+}
+.col33 {
+	width: 33%;
+	float: right;
+}
+.col66 {
+	width: 65%; /* Slightly less than 66% to create gutters between columns */
+	float: left;
+}
+/* [END] Layout */
+
+/* [START] Global Nav */
+.nav-global {
+	color: #666;
+	list-style: none;
+	padding: .25em 0 0; 
+	text-align: right;
+}
+.nav-global li {
+	display: inline;
+	padding: 0 0 0 1em;
+}
+.nav-global-welcome {
+	font-style: italic;
+}
+.nav-global-skip a {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+.nav-global-skip a:focus,
+.nav-global-skip a:active {
+	position: static;
+	width: auto;
+	height: auto;
+}
+/* [END] Global Nav */
+
+/* [START] Branding */
+.siteBranding {
+	color: #036;
+	font: 200% AntennaBold, sans-serif;
+	font-weight: normal;
+	height: 69px;
+}
+.siteBranding a,
+.siteBranding a:link,
+.siteBranding a:visited {
+	color: #036;
+	text-decoration: none;
+}
+.siteBranding a:hover,
+.siteBranding a:focus {
+	text-decoration: underline;
+}
+.siteBranding img {
+	margin: 0 24px 0 0;
+	vertical-align: middle;
+}
+/* [END] Branding */
+
+/*	[START] Nav Menu */
+/*	All CSS for the *mechanics* of the nav menu is in FUIL.css. All *styling* of the menu is done here. */
+/* Nav Menu font */
+#nav { /* Top-level font */
+	font-family: AntennaCondBold, sans-serif;
+	font-size: 116.66666666666666%;
+	font-weight: normal;
+}
+#nav ul a:link,
+#nav ul a:visited {
+	font-family: AntennaCondMedium, sans-serif; /* 2nd-level and below font */
+}
+/* Image Textures (these partially-transparent png images will be applied over the background colors specified farther below) */
+#nav,
+#nav > li > a { /* Top-level default background */				
+	background-image: url(../images/gradient_texture.png);
+}
+#nav > li.sfexpandable > a { /* Top-level background for expandable items */
+	background-image: url(../images/FUIL/gradient_texture_navArrowD.png);
+	background-position: 101% center;
+}
+#nav ul .sfexpandable > a { /* 2nd-level and below background for expandable items */
+	background: url(../images/FUIL/navArrowR.png) no-repeat 95% 50%;
+}
+/* Corners, Shadows, Dividers */
+#nav,
+#navcontainer,
+#nav a#tab01,
+#nav ul ul {
+	border-radius: 5px; /* rounded corners on top-level and 3rd, 4th, 5th levels. */
+}
+#nav ul,
+#nav ul li:last-child > a {
+	border-radius: 0 0 5px 5px; /* rounded corners on 2nd-level (square at the top to descend from top-level); and for the last item in a 2nd, 3rd, 4th, 5th level menu */
+}
+#nav ul ul li:first-child > a {
+	border-radius: 0 5px 0 0; /* rounded corner on only the upper right, for the first item in an expanded 3rd, 4th, 5th-level list */
+}
+#navcontainer,
+#nav li:hover > ul,
+#nav li.sfhover > ul {
+	box-shadow: 4px 4px 6px #999; /* Shadow applied to all menu levels */
+}
+#nav > li > a,
+#nav > li.sfexpandable > a {
+	border-right: 2px groove #999; /* Divider between top-level "tabs" */
+}
+/* Colors */
+#section01 #nav a#tab01,
+#section02 #nav a#tab02,
+#section03 #nav a#tab03,
+#section04 #nav a#tab04,
+#section05 #nav a#tab05,
+#section06 #nav a#tab06,
+#section07 #nav a#tab07,
+#section08 #nav a#tab08,
+#section09 #nav a#tab09,
+#section10 #nav a#tab10,
+#section11 #nav a#tab11,
+#section12 #nav a#tab12 {
+	background-color: #024; /* Top-level background for current "tab" */
+}
+#nav,
+#nav > li > a,
+#nav > li.sfexpandable > a {
+	background-color: #047; /* Top-level background */
+}
+#nav a:link,
+#nav a:visited { /* Top-level links */
+	color: #FFF;
+}
+#nav ul,
+#nav > li > a:hover,
+#nav > li > a:focus,
+#nav a:hover,
+#nav a:focus,
+#nav .sfexpandable.sfhover > a:link,
+#nav .sfexpandable.sfhover > a:visited,
+#section01 #nav a#tab01:hover,
+#section01 #nav a#tab01:focus,
+#section02 #nav a#tab02:hover,
+#section02 #nav a#tab02:focus,
+#section03 #nav a#tab03:hover,
+#section03 #nav a#tab03:focus,
+#section04 #nav a#tab04:hover,
+#section04 #nav a#tab04:focus,
+#section05 #nav a#tab05:hover,
+#section05 #nav a#tab05:focus,
+#section06 #nav a#tab06:hover,
+#section06 #nav a#tab06:focus,
+#section07 #nav a#tab07:hover,
+#section07 #nav a#tab07:focus,
+#section08 #nav a#tab08:hover,
+#section08 #nav a#tab08:focus,
+#section09 #nav a#tab09:hover,
+#section09 #nav a#tab09:focus,
+#section10 #nav a#tab10:hover,
+#section10 #nav a#tab10:focus,
+#section11 #nav a#tab11:hover,
+#section11 #nav a#tab11:focus,
+#section12 #nav a#tab12:hover,
+#section12 #nav a#tab12:focus,
+#section01 #nav .sfexpandable.sfhover > a#tab01:link,
+#section01 #nav .sfexpandable.sfhover > a#tab01:visited,
+#section02 #nav .sfexpandable.sfhover > a#tab02:link,
+#section02 #nav .sfexpandable.sfhover > a#tab02:visited,
+#section03 #nav .sfexpandable.sfhover > a#tab03:link,
+#section03 #nav .sfexpandable.sfhover > a#tab03:visited,
+#section04 #nav .sfexpandable.sfhover > a#tab04:link,
+#section04 #nav .sfexpandable.sfhover > a#tab04:visited,
+#section05 #nav .sfexpandable.sfhover > a#tab05:link,
+#section05 #nav .sfexpandable.sfhover > a#tab05:visited,
+#section06 #nav .sfexpandable.sfhover > a#tab06:link,
+#section06 #nav .sfexpandable.sfhover > a#tab06:visited,
+#section07 #nav .sfexpandable.sfhover > a#tab07:link,
+#section07 #nav .sfexpandable.sfhover > a#tab07:visited,
+#section08 #nav .sfexpandable.sfhover > a#tab08:link,
+#section08 #nav .sfexpandable.sfhover > a#tab08:visited,
+#section09 #nav .sfexpandable.sfhover > a#tab09:link,
+#section09 #nav .sfexpandable.sfhover > a#tab09:visited,
+#section10 #nav .sfexpandable.sfhover > a#tab10:link,
+#section10 #nav .sfexpandable.sfhover > a#tab10:visited,
+#section11 #nav .sfexpandable.sfhover > a#tab11:link,
+#section11 #nav .sfexpandable.sfhover > a#tab11:visited,
+#section12 #nav .sfexpandable.sfhover > a#tab12:link,
+#section12 #nav .sfexpandable.sfhover > a#tab12:visited {
+	background-color: #333; /* 2nd-level background */
+}
+#nav ul a:link,
+#nav ul a:visited { /* 2nd-level links */
+	color: #AAA;
+	border-bottom: 1px solid #666;
+}
+#nav ul ul,
+#nav ul a:hover,
+#nav ul a:focus,
+#nav ul .sfkeyhover > a:link,
+#nav ul .sfkeyhover > a:visited,
+#nav ul .sfexpandable.sfhover > a:link,
+#nav ul .sfexpandable.sfhover > a:visited {
+	background-color: #666; /* 3rd-level background */
+}
+#nav ul ul a:link,
+#nav ul ul a:visited,
+#nav ul a:hover,
+#nav ul a:focus,
+#nav ul .sfkeyhover > a:link,
+#nav ul .sfkeyhover > a:visited,
+#nav ul .sfexpandable.sfhover > a:link,
+#nav ul .sfexpandable.sfhover > a:visited { /* 3rd-level links */
+	color: #EEE;
+	border-bottom: 1px solid #999;
+}
+#nav ul ul ul,
+#nav ul ul a:hover,
+#nav ul ul a:focus,
+#nav ul ul .sfkeyhover > a:link,
+#nav ul ul .sfkeyhover > a:visited,
+#nav ul ul .sfexpandable.sfhover > a:link,
+#nav ul ul .sfexpandable.sfhover > a:visited {
+	background-color: #999; /* 4th-level background */
+}
+#nav ul ul ul a:link,
+#nav ul ul ul a:visited,
+#nav ul ul a:hover,
+#nav ul ul a:focus,
+#nav ul ul .sfkeyhover > a:link,
+#nav ul ul .sfkeyhover > a:visited,
+#nav ul ul .sfexpandable.sfhover > a:link,
+#nav ul ul .sfexpandable.sfhover > a:visited { /* 4th-level links */
+	color: #222;
+	border-bottom: 1px solid #CCC;
+}
+#nav ul ul ul a:hover,
+#nav ul ul ul a:focus,
+#nav ul ul ul .sfkeyhover > a:link,
+#nav ul ul ul .sfkeyhover > a:visited,
+#nav ul ul ul .sfexpandable.sfhover > a:link,
+#nav ul ul ul .sfexpandable.sfhover > a:visited,
+#nav ul ul ul ul {
+	background-color: #9CF; /* 5th-level background */
+}
+#nav ul ul ul ul a:link,
+#nav ul ul ul ul a:visited,
+#nav ul ul ul a:hover,
+#nav ul ul ul a:focus,
+#nav ul ul ul .sfkeyhover > a:link,
+#nav ul ul ul .sfkeyhover > a:visited,
+#nav ul ul ul .sfexpandable.sfhover > a:link,
+#nav ul ul ul .sfexpandable.sfhover > a:visited { /* 5th-level links */
+	color: #00F;
+	border-bottom: 1px solid #DEF;
+}
+#nav ul ul ul ul a:hover,
+#nav ul ul ul ul a:focus,
+#nav ul ul ul ul .sfkeyhover > a:link,
+#nav ul ul ul ul .sfkeyhover > a:visited,
+#nav ul ul ul ul .sfexpandable.sfhover > a:link,
+#nav ul ul ul ul .sfexpandable.sfhover > a:visited { /* 5th-level hover state */
+	background-color: #DEF;
+	color: #369;
+}
+/* [END] Nav Menu */
+
+/* [START] Breadcrumbs */
+#breadcrumb p {
+	color: #666;
+	padding: 0;
+}
+#breadcrumb a {
+	color: #999;
+	text-decoration: none;
+}
+#breadcrumb a:hover {
+	text-decoration: underline;
+}
+/* [END] Breadcrumbs */
+
+/* [START] Alerts & Consoles */
+.alert {
+	background: #FFF no-repeat 10px 10px;
+	border-radius: 5px;
+	border-style: solid;
+	font-weight: bold;
+	font-size: 108.33333333333333%;
+	margin: 0 0 .75em 0;
+	min-height: 20px;
+	padding: 1em 0 1em 55px;
+}
+.alert p {
+	padding: 0;
+}
+.alert ol {
+	list-style: inside square;
+	line-height: 1.5em;
+}
+.alert ul {
+	margin-left: 1em;
+}
+.successConsole {
+	background-image: url(../images/alert_success.png);
+	border-color: #090;
+}
+.warningConsole,
+.validationWarnings {
+	background-image: url(../images/alert_warning.png);
+	border-color: #F90;
+}
+.validationErrors,
+.errorConsole {
+	background-image: url(../images/alert_error.png);
+	border-color: #C00;
+}
+.error {
+	font-weight: bold;
+	color: #FF4;
+}
+/* [END] Alerts & Consoles */
+
+/* [START] Border Box */
+.borderBox > .inner {
+	background: #FFF;
+	border-color: #CCC;
+	border-radius: 5px;
+	border-style: solid;
+	padding: 1em;
+}
+.borderBox ol {
+	list-style: none;
+}
+/* [END] Border Box */
+
+/* [START] Criteria Set*/
+.criteriaSet {
+	background: #E7E7E7;
+	border-color: #CCC;
+	border-radius: 5px;
+	border-style: solid;
+	padding: 0.5em 1em 0 1em;
+}
+.criteriaSet .inner {
+	border: 0;
+	float: left;
+	padding: 0 2em 0.5em 0;
+}
+.criteriaSet dl {
+	padding: 0 0 .5em 0;
+}
+.criteriaSet dt {
+	font-weight: bold;
+}
+.criteriaSet .options {
+	border-bottom: 1px solid #CCC;
+	float: left;
+	margin-bottom: .5em;
+	padding: 0 0 .5em 0;
+	width: 100%;
+}
+.criteriaSet .optionModify {
+	float: left;
+}
+.criteriaSet .optionShow {
+	float: right;
+	text-align: right;
+}
+.criteriaSet .optionShow a {
+	display: inline;
+}
+.criteriaSet .optionShow a.revealActive {
+	color: #333;
+	font-weight: bold;
+	text-decoration: none;
+}
+.criteriaSet .criteriaLine {
+	clear: both;
+	float: left;
+	width: 100%;
+}
+.criteriaSet .criteriaLine a {
+	font-size: .9em;
+	font-weight: normal;
+}
+/* [END] Criteria Set */
+
+/* [START] Dynamic Tabs */
+.dynamicTabs {
+	float: left;
+	list-style: none;
+	padding-left: 0;
+}
+.dynamicTabs li {
+	background: #FFF;
+	border-color: #CCC;
+	border-style: solid;
+	border-width: 1px 1px 0;
+	border-radius: 3px 3px 0 0;
+	float: left;
+	margin: 0 0.5em 0 0;
+	padding: 0;
+	position: relative;
+	top: 1px;
+}
+.dynamicTabs a,
+.dynamicTabs a:link,
+.dynamicTabs a:visited,
+.dynamicTabs a:hover {
+ 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#DDDDDD, endColorstr=#FFFFFF);	/* IE 6+ */
+	background-image: -webkit-linear-gradient(top, #DDD, #FFF); /* Safari 5.1+, Mobile Safari, Chrome 10+ */
+	background-image: -moz-linear-gradient(top, #DDD, #FFF);	/* Firefox 3.6+ */
+	background-image: -o-linear-gradient(top, #DDD, #FFF);		/* Opera 11.10+ */
+	border-radius: 3px 3px 0 0;
+	border-top: 2px solid #EEE;
+	color: #666;
+	display: block;
+	font-family: AntennaMedium, sans-serif;
+	font-weight: normal;
+	padding: .5em 1em;
+	text-decoration: none;
+}
+.dynamicTabs a.revealActive,
+.dynamicTabs a.revealActive:link,
+.dynamicTabs a.revealActive:hover,
+.dynamicTabs a.revealActive:visited {
+ 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#EEEEEE, endColorstr=#FFFFFF);	/* IE 6+ */
+	background-image: -webkit-linear-gradient(top, #EEE, #FFF); /* Safari 5.1+, Mobile Safari, Chrome 10+ */
+	background-image: -moz-linear-gradient(top, #EEE, #FFF);	/* Firefox 3.6+ */
+	background-image: -o-linear-gradient(top, #EEE, #FFF);		/* Opera 11.10+ */
+	border-top: 2px solid #FFF;
+	color: #333;
+	margin-bottom: 1px;
+	position: relative;
+}
+.dynamicTabContent {
+	background: #FFF;
+	border-color: #CCC;
+	border-radius: 0 5px 5px;
+	border-style: solid;
+	clear: both;
+	float: none;
+}
+.dynamicTabContent .inner {
+	background: #FFF;
+	border-radius: 0 0 5px 5px;
+	padding: 1em;
+}
+/* [END] Dynamic Tabs */
+
+/* [START] Form Buttons */
+.formButtons,
+.formButtonsSm,
+.formButtonsMd {
+	background: #EEE;
+	border: 1px solid #DDD;
+	border-bottom: none;
+	border-radius: 8px 8px 0 0;
+	clear: both;
+	margin: 0 auto -1em;
+	max-width: 1124px;
+	text-align: center;
+}
+.formButtonsSm {
+	white-space: nowrap;
+	width: 20%;
+}
+.formButtonsMd {
+	width: 60%;
+}
+.formButtons fieldset,
+.formButtonsSm fieldset,
+.formButtonsMd fieldset {
+	border: 0;
+	padding: .75em .5em;
+}
+.formButtons legend span,
+.formButtonsSm legend span,
+.formButtonsMd legend span {
+	display: block;
+	height: 0;
+	overflow: hidden;
+}
+.formButtons input,
+.formButtonsSm input,
+.formButtonsMd input,
+.formButtons a,
+.formButtonsSm a,
+.formButtonsMd a {
+	display: inline-block;
+	margin: 0 .25em;
+}
+.formButtons .notes,
+.formButtonsSm .notes,
+.formButtonsMd .notes {
+	clear: both;
+	color: #999;
+	display: block;
+	font-size: .9em;
+	padding: .5em 0 0 0;
+	text-align: center;
+}
+.formButtons_left {
+	float: left;
+	text-align: left;
+	width: 30%;
+}
+.formButtons_center {
+	float: left;
+	text-align: center;
+	width: 38.5%; /* if the left, center and right columns equal 100%, rounding errors cause display issues in IE7 */
+}
+.formButtons_right {
+	float: right;
+	text-align: right;
+	width: 30%;
+}
+#pageActions {
+	background: #FFF;
+	border-color: #CCC;
+	border-radius: 5px;
+	border-style: solid;
+	margin-bottom: 0;
+	padding: .5em;
+}
+#pageActions fieldset {
+	padding: 0;
+}
+.buttonPrimary,
+.buttonPrimaryDefault,
+.buttonSecondary,
+.buttonTertiary,
+.buttonTertiary2 {
+	background-image: url(../images/button_texture.png);
+	background-position: center;
+	border-radius: 4px;
+	border-width: 1px 1px 2px;
+	border-style: solid;
+	cursor: pointer;
+	font-family: AntennaCondBold, sans-serif !important;
+	font-size: 116.66666666666666%;
+	font-weight: normal;
+	padding: .1em .7em;
+}
+.buttonPrimary:hover,
+.buttonSecondary:hover,
+.buttonTertiary:hover,
+.buttonTertiary2:hover {
+	background-position: center 30%;
+	border-color: #9CF;
+}
+.buttonPrimaryDefault:hover {
+	background-position: center 30%;
+	border-color: #0F0;
+}
+.buttonPrimaryDefault {
+	background-color: #090;
+	border-color: #0C0 #090 #050 #0C0;
+	color: #FFF;
+}
+.buttonPrimary {
+	background-color: #215A8F;
+	border-color: #58B #258 #147 #58B;
+	color: #FFF;
+}
+.buttonSecondary,
+.buttonTertiary2 {
+	background-color: #CCC;
+	border-color: #AAA #666 #555 #AAA;
+	color: #222;
+}
+.buttonTertiary {
+	background-color: #215A8F;
+	border-color: #58B #258 #147 #58B;
+	color: #FFF;
+}
+.buttonTertiary,
+.buttonTertiary2 {
+	font-size: 100%;
+	font-weight: normal;
+	padding: 0 8px;
+}
+a.buttonPrimary,
+a.buttonPrimaryDefault,
+a.buttonTertiary,
+a.buttonPrimary:link,
+a.buttonPrimaryDefault:link,
+a.buttonTertiary:link,
+a.buttonPrimary:visited,
+a.buttonPrimaryDefault:visited,
+a.buttonTertiary:visited {
+	color: #FFF;
+	text-decoration: none;
+}
+a.buttonSecondary,
+a.buttonTertiary2,
+a.buttonSecondary:link,
+a.buttonTertiary2:link,
+a.buttonSecondary:visited,
+a.buttonTertiary2:visited {
+	color: #222;
+	text-decoration: none;
+}
+/* [END] Form Buttons */
+
+/* [START] Form Controls */
+.formRequiredInput {
+	background: #EEE;
+	border: 1px solid #CCC;
+	border-radius: 0 0 5px 5px;
+	font-size: .9em;
+	padding: .4em 1em .4em .8em;
+	position: absolute;
+	right: 1.5em;
+}
+.formRequiredIndicator {
+	margin-right: .25em;
+	vertical-align: top;
+}
+.labelContainer {
+	display: block;
+	float: left;
+	font-weight: bold;
+	padding-right: .5em;
+	text-align: right;
+	width: 45%;
+}
+.inputContainer {
+	display: block;
+	float: left;
+}
+dd.inputContainer {
+	width: 50%; /* Prevents the <dd> from wrapping below the <dt> if the text within exceeds the space allowed */
+}
+.checkIndent input {
+	float: left;
+}
+.checkIndent label {
+	font-weight: normal;
+}
+.checkIndent .labelContainer {
+	float: left;
+	padding-left: .5em;
+	text-align: left;
+	width: 96%;
+}
+/* [END] Form Controls */
+
+/* [START] Form Control - Date Picker Component */
+table.calendar_date_selector_monthpicker,
+table.calendar_date_selector_days {
+	background: #EEE;
+	border: 0;
+	box-shadow: none;
+	margin: 0;
+}
+table.calendar_date_selector_monthpicker td,
+table.calendar_date_selector_monthpicker th,
+table.calendar_date_selector_days td,
+table.calendar_date_selector_days th {
+	background: #EEE;
+	border: 0;
+	padding: 0;
+}
+.calendar_date_selector_field {	/* The text input field */
+	float: left;
+	margin: 0;
+	width: 7em;
+}
+.calendar_date_selector_field_disabled {	/* When input field is disabled. The Calendar will apply this class if it discovers the input field disabled upon initial load. */
+	background-color: #F0F0F0;
+	border: 1px solid #CCC;
+	margin: 0;
+	padding: 1px 0;
+}
+.calendar_date_selector_link,
+.calendar_date_selector_link_disabled {	/* Icon for floating calendar. */
+	background: transparent url(../images/FUIL/show-calendar.gif) 0 0 no-repeat;
+	display: block;
+	float: left;
+	height: 16px;
+	margin: 4px;
+	overflow: hidden;
+	text-indent: -999em;
+	width: 16px;
+}
+.calendar_date_selector_link_disabled {	/* Icon to show if the field is disabled */
+	opacity: .5;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";	/* IE8 */
+}
+.calendar_date_selector {
+	font-size: 1.2em;	/* ALL font sizes, padding, and calendar dimensions depend on this font-size. */
+	margin: 0;
+	padding: 0;
+}
+.calendar_date_selector a,
+.calendar_date_selector a:link,
+.calendar_date_selector a:visited {
+	color: #33A;
+}
+.calendar_date_selector {	/* Calendar primary styles */
+	background: #EEE;
+	border-color: #999;
+	border-radius: 5px;
+	border-style: solid;
+	left: 0;
+	overflow: visible;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 15em;
+	z-index: 2;
+}
+.calendar_date_selector h3 {
+	background-color: #FC9;
+	width: auto;
+}
+.calendar_date_selector a {
+	padding: .1em;
+	text-decoration: none;
+}
+.calendar_date_selector_headerbar {	/* Calendar Header: title text and close button */
+	background: #666 url(../images/button_texture.png) center;
+	border-radius: 5px 5px 0 0;
+	color: #fff;
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1.6em;
+	padding: 0 0 .1em .4em;
+	text-align: left;
+}
+.calendar_date_selector_bgclicktoclose {
+	background: transparent url(../images/FUIL/closebutton.gif) 0 center no-repeat;
+	display: block;
+	height: 18px;
+	position: absolute;
+	right: .25em;
+	top: .1em;
+	width: 18px;
+}
+.calendar_date_selector_incrementyear {	/* Selected Year Display and next/prev buttons */
+	margin: .5em 0;
+}
+.calendar_date_selector_incrementyear a {
+	padding: 0 .5em;
+}
+.calendar_date_selector_incrementyear input {
+	color: #333;
+	font-weight: bold;
+	text-align: center;
+	width: 4em;
+}
+table.calendar_date_selector_monthpicker {	/* Month Grid. Two rows of six columns that look like buttons. */
+	box-shadow: none;
+	font-size: 0.95em;
+	margin: 0 0 1px 0;
+	table-layout: fixed;
+}
+.calendar_date_selector_monthpicker td a {
+	display: block;
+	font-size: .8em;
+}
+.calendar_date_selector_monthpicker a:hover {
+	background-color: #9CF;
+	border-radius: 12px;
+	color: #FFF;
+}
+.calendar_date_selector_monthpicker .calendar_date_selector_monthpicker_current a {
+	background-color: #FF9;
+	border-right: 1px solid #999;
+	border-bottom: 1px solid #999;
+	border-radius: 5px;
+	color: #00A;
+	margin: 2px 0;
+}
+.calendar_date_selector_monthpicker .calendar_date_selector_monthpicker_current a:hover {
+	background-color: #333;
+	color: #FFF;
+}
+.calendar_date_selector_days {	/* The Day of the Month Table (.calendar_date_selector_days) */
+	clear: both;
+	margin: 0.5em 0 0 0;
+	padding: 0;
+}
+.calendar_date_selector_days a,
+.calendar_date_selector_days span.fauxAnchor {
+	display: block;
+	line-height: 1em;
+	margin: 0;
+	padding: 0;
+}
+table.calendar_date_selector_days td {
+	padding: 1px;
+}
+table.calendar_date_selector_days td a {
+	background: #DDD;
+	border-right: 1px solid #AAA;
+	border-bottom: 1px solid #AAA;
+	border-radius: 5px;
+	display: block;
+	line-height: 1.4em;
+}
+.calendar_date_selector_days a:hover {
+	background: #9CF;
+	color: #00F;
+}
+.calendar_date_selector_days div.empty {
+	visibility: hidden;
+}
+.calendar_date_selector_days div.empty span.fauxAnchor {
+	border-width: 1px 0;
+}
+.calendar_date_selector_days div.clear {
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+.calendar_date_selector_wkcolumn { /* The Week Column Definition, if one is used.*/
+	background-color: #999;
+	border: 1px solid #FFF;
+	color: #fff;
+}
+.calendar_date_selector_nonselectable {	/* This date failed the rules test (meaning it was in the exception list) */
+	border: 1px solid #EEE;
+	color: #666;
+}
+.calendar_date_selector_nonselectable span.fauxAnchor {
+	border-width: 1px 0;
+}
+.calendar_date_selector_selecteddate a,
+.calendar_date_selector_selecteddate a:hover { /* Currently Selected Date */
+	background-color: #CCC;
+	border: 1px solid #CCC;
+	font-weight: bold;
+}
+.calendar_date_selector_currentdate a,
+.calendar_date_selector_currentdate span.fauxAnchor { /* Today */
+	background: #FF9 !important;
+}
+.calendar_date_selector_selecttoday { /* Today's Date at bottom of DatePicker */
+	font-size: .8em;
+}
+.calendar_date_selector_selecttoday a {
+	display: block;
+	padding: 5px 0;
+	width: 100%;
+}
+.calendar_date_selector_selecttoday_nonselectable {	/* If today's date is blocked by a date rule violation, it is not clickable */
+	color: #999;
+	display: block;
+	padding: .5em 0;
+	text-decoration: line-through;
+	width: 100%;
+}
+.calendar_date_selector_picker_only { /* Identifies field as read-only. */
+	background-color: #f0f0f0;
+	border: 1px solid #ccc;
+}
+th.calendar_date_selector_days_head {
+	background: #79B !important;
+	font-weight: normal;
+}
+.calendar_date_selector_days {
+	border-collapse: collapse;
+	table-layout: fixed;
+	width: 100%;
+}
+.calendar_date_selector_days th {
+	font-size: 0.75em;
+}
+/* [END] Form Control - Date Picker Component */
+
+/* [START] Form Fieldsets */
+fieldset {
+	border: 0;
+	clear: both;
+	position: relative;
+}
+legend {
+	color: #000;
+	font-weight: bold;
+	padding: 0;
+}
+fieldset > .inner {
+	background: #FFF;
+	border-color: #CCC;
+	border-radius: 5px;
+	border-style: solid;
+	padding-top: none;
+	padding-left: 4px;
+}
+fieldset ol {
+	list-style: none;
+}
+
+fieldset ol li {
+	padding: 0px;
+}
+
+
+fieldset ol li,
+.formControlsVertical .subForm ol li {
+	clear: both;
+	margin: 0;
+	/*padding: 0 0 .75em 0;*/
+	padding: 0px
+}
+fieldset ol li fieldset {
+	margin: 0;
+	padding: 0;
+}
+fieldset.formControlsHorizontal ol li {
+	clear: none;
+	float: left;
+	margin: 0 1em 0 0;
+	width: auto;
+}
+fieldset.formControlsVertical ol li {
+	line-height: 1.5em;
+	padding: 0;
+}
+fieldset ol li.formTopLabel legend span {
+	margin-top: 1em;
+}
+fieldset ol li.formTopLabel label {
+	color: #999;
+	display: block;
+	font-size: .9em;
+	text-align: left;
+}
+fieldset ol li.formTopLabel .formInlineButton {
+	margin-top: 1em;
+}
+fieldset label,
+.formControlsHorizontal legend,
+.formControlsVertical legend,
+.multiSelect div.legend {
+	color: #000;
+	font-weight: bold;
+}
+fieldset fieldset legend {
+	color: #999;
+}
+fieldset fieldset legend span {
+	position: relative;
+}
+fieldset fieldset {
+	margin: 0;
+	padding: 0;
+}
+/* [END] Form Fieldset */
+
+/* [START] Form Layout - Horizontal/Vertical */
+.formControlsHorizontal,
+.formControlsVertical {
+	border: 0;
+}
+.formControlsHorizontal legend,
+.formControlsVertical legend,
+.multiSelect div.legend {
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+.formControlsHorizontal legend span,
+.formControlsVertical legend span {
+	display: block;
+	position: absolute;
+	text-align: right;
+	width: 45%;
+}
+.formControlsHorizontal legend span span,
+.formControlsVertical legend span span {
+	display: inline;
+	position: relative;
+}
+.formControlsHorizontal legend span span.formNotes,
+.formControlsVertical legend span span.formNotes {
+	display: block;
+	width: 100%;
+}
+.formControlsHorizontal label,
+.formControlsVertical label {
+	font-weight: normal;
+}
+.formControlsHorizontal .labelContainer,
+.formControlsVertical .labelContainer {
+	margin-top: 1.25em;
+}
+.formControlsHorizontal .inputContainer,
+.formControlsVertical .inputContainer {
+	position: relative;
+	width: 50%;
+}
+.formControlsHorizontal .inputContainer div input,
+.formControlsVertical .inputContainer div input {
+	margin-left: 0;
+}
+.formControlsHorizontal .inputContainer .inputConnectorText {
+	float: left;
+	padding-right: 1em;
+}
+.formControlsHorizontal .inputContainer div {
+	display: inline;
+	float: left;
+	padding-right: 1em;
+	position: relative;
+}
+.formControlsHorizontal .inputContainer .buttonBelow {
+	clear: both;
+	display: block;
+	float: none;
+	padding-top: 1.35em;
+}
+.formControlsVertical .multiSelect_noSelection {
+	color: #999;
+}
+.formTopLabel .formControlsHorizontal .inputContainer .inputConnectorText {
+	padding-top: 1.25em;
+}
+/* [END] Form Layout - Horizontal/Vertical */
+
+/* [START] Form Layout - Top Label */
+.topLabelForm .formControlsHorizontal .labelContainer,
+.topLabelForm .formControlsVertical .labelContainer {
+	margin-top: 0em;
+}
+.topLabelForm .formControlsHorizontal .inputContainer,
+.topLabelForm .formControlsVertical .inputContainer {
+	width: auto;
+}
+.topLabelForm_row .formControlsHorizontal .inputContainer .inputConnectorText {
+	padding-top: 1.25em;
+}
+.topLabelForm_col {
+	clear: none;
+	display: inline;
+	float: left;
+	padding-right: 2em;
+}
+.topLabelForm_row {
+	clear: both;
+	float: left;
+	padding-bottom: 1em;
+}
+.topLabelForm .labelContainer {
+	clear: both;
+	float: none;
+	text-align: left;
+	white-space: nowrap;
+	width: auto;
+}
+.topLabelForm .checkIndent div {
+	margin-left: 1.25em;
+	padding-left: 1em;
+}
+/* [END] Form Layout - Top Label */
+
+/* [START] Form Notes */
+.formNotes,
+.formNotesLink {
+	color: #999;
+	display: block;
+	font-size: .9em;
+	font-weight: normal;
+}
+.formNotes label {
+	color: #999;
+}
+.formNotes img {
+	margin-left: 0.25em;
+	margin-right: 0.25em;
+}
+.inputContainer .formNotes,
+.inputContainer .formNotesLink {
+	clear: both;
+}
+.formNotesLink {
+	float: left;
+}
+/* [END] Form Notes */
+
+/* [START] Form Sub Form */
+.subForm {
+	background-color: #FFF;
+	border: 1px solid #DDD;
+	border-radius: 5px;
+	padding: 0.5em 1em;
+}
+.subForm fieldset {
+	border: none;
+}
+.formControlsVertical .subForm .labelContainer {
+	margin-top: 0;
+}
+.formControlsVertical .subForm label {
+	font-weight: bold;
+}
+/* [END] Form Sub Form */
+
+/* [START] Inline Elements
+   For positioning links/elements on the left/right of the viewport, on the same horizontal plane.
+   Elements will always align to one another at the TOP, not the bottom. */
+.inlineElements {
+	float: left;
+	margin-bottom: .25em;
+	width: 100%;
+}
+.inlineElements * {
+	margin-bottom: 0;
+}
+.inlineElements .primaryGroup {
+	float: left;
+}
+.inlineElements .secondaryGroup {
+	float: right;
+}
+.inlineElements .secondaryGroup * {
+	float: left;
+	margin-left: 1em;
+	text-align: right;
+}
+/* [END] Inline Elements */
+
+/* [START] Overlay Closer */
+.overlayCloseLink {
+	padding-bottom: 1em;
+	text-align: center;
+}
+.overlayCloseIcon {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+/* [END] Overlay Closer */
+
+/* [START] Reveal Hide/Show */
+.revealHead {
+	background: #FFF;
+	margin: 0;
+}
+.revealHead a,
+.revealHead a:link,
+.revealHead a:visited,
+.revealHead a:active {
+	border: 1px solid #CCC;
+	border-radius: 5px;
+	display: block;
+	font-family: AntennaCondBold, sans-serif;
+	font-size: 110%;
+	font-weight: normal;
+	padding: .25em .5em;
+	text-decoration: none;
+}
+.revealActive {
+	border-bottom: none !important;
+	border-radius: 5px 5px 0 0 !important;
+}
+.hide,
+.show {
+	float: right;
+	font-size: 13px;
+	font-weight: normal;
+	font-family: Trebuchet MS;
+	margin-top: .5em;
+	text-decoration: underline;
+}
+/* [END] Reveal Hide/Show */
+
+/* [START] Special Links */
+a.excelLink,
+a.excelLink:link,
+a.excelLink:visited {
+	background: url(../images/icons_sprite.png) no-repeat -2px 0px;
+	display: inline-block;
+	padding: 1px 0 3px 20px;
+}
+a.wordLink,
+a.wordLink:link,
+a.wordLink:visited {
+	background: url(../images/icons_sprite.png) no-repeat -2px -40px;
+	display: inline-block;
+	padding: 1px 0 3px 20px;
+}
+a.pdfLink,
+a.pdfLink:link,
+a.pdfLink:visited {
+	background: url(../images/icons_sprite.png) no-repeat -2px -80px;
+	display: inline-block;
+	padding: 1px 0 3px 20px;
+}
+a.pptLink,
+a.pptLink:link,
+a.pptLink:visited {
+	background: url(../images/icons_sprite.png) no-repeat -2px -120px;
+	display: inline-block;
+	padding: 1px 0 3px 20px;
+}
+a.rssLink,
+a.rssLink:link,
+a.rssLink:visited {
+	background: url(../images/icons_sprite.png) no-repeat -2px -160px;
+	display: inline-block;
+	padding: 1px 0 3px 20px;
+}
+a.webLink,
+a.webLink:link,
+a.webLink:visited {
+	background: url(../images/icons_sprite.png) no-repeat -2px -200px;
+	display: inline-block;
+	padding: 1px 0 3px 20px;
+}
+a.printLink,
+a.printLink:link,
+a.printLink:visited {
+	background: url(../images/icons_sprite.png) no-repeat -2px -240px;
+	display: inline-block;
+	padding: 1px 0 3px 20px;
+}
+a.externalLink,
+a.externalLink:link,
+a.externalLink:visited {
+	background: url(../images/icons_sprite.png) no-repeat right -282px;
+	display: inline-block;
+	padding: 1px 20px 3px 0;
+}
+.moreLink {
+	background: url(/fullee2/MasterSheet/images/FUIL/navArrowD.png) no-repeat right 7px;
+	padding-right: 13px;
+}
+.link_olayClose {
+	display: inline-block;
+	text-align: center;
+}
+/* [END] Special Links */
+
+/* [START] Table Classes, Controls, and Components */
+.altRow td {
+	background: #EEE;
+}
+.dataControls {
+	clear: both;
+	color: #999;
+	width: 100%;
+	margin: 0 0 .15em 0;
+}
+.paginationResults {
+	float: left;
+	width: 35%;
+}
+.paginationResultsShowing {
+	float: left;
+	width: 30%;
+	text-align: center;
+}
+.pagination {
+	float: right;
+	text-align: right;
+	width: 34%; /* cumulative width of all pagination elements is 99% to prevent line from breaking in IE6 */
+}
+.pagination a {
+	margin: 0 1px;
+}
+.exportLink {
+	float: right;
+	margin-bottom: .5em;
+	text-align: right;
+}
+th.sort_descending a,
+th.sort_descending a:link,
+th.sort_descending a:visited {
+	background: url(../images/sort_descending.gif) no-repeat right center;
+	display: inline-block;
+	padding-right: 12px;
+}
+th.sort_ascending a,
+th.sort_ascending a:link,
+th.sort_ascending a:visited {
+	background: url(../images/sort_ascending.gif) no-repeat right center;
+	display: inline-block;
+	padding-right: 12px;
+}
+a.inlineMenuTrigger {
+	text-decoration: underline;
+}
+.tableActionMenu {
+	background: #DDD;
+	border-color: #CCC;
+	border-radius: 0 0 5px 5px;
+	border-top: none !important;
+	border-style: solid;
+	margin: -0.4em 0 .25em 0;
+	padding: .7em 1em;
+}
+.tableLegend {
+	background: #FFC;
+	border: 1px solid #DA0;
+	border-radius: 3px;
+	float: left;
+	list-style: none;
+	padding: 3px 0 2px 1em;
+}
+.tableLegend li {
+	float: left;
+	padding: 0 1em 0 0;
+}
+.tableLegend li,
+.inlineElements .secondaryGroup .tableLegend * { /* overrides inherited margins when in an inline group, where the legend will usually reside */
+	margin: 0;
+}
+.tableLegend dl {
+	float: left;
+}
+.tableLegend dt {
+	float: left;
+	padding-right: 4px;
+}
+.tableLegend dd {
+	float: left;
+}
+.scrollingData .tableHeader td {
+	padding: 0;
+}
+.selectActions {
+	clear: both;
+	float: none;
+}
+/* [END] Table Classes, Controls, and Components */
+
+/* [START] Table List View */
+.listView {
+	border-radius: 12px;
+}
+.listView,
+.listView td {
+	background: #FFF;
+	border: none !important;
+	border-collapse: separate;
+	box-shadow: none !important;
+}
+.listView td {
+	border-radius: 6px;
+	padding: 0;
+}
+.listView tr.toggleCheckActive td {
+	background-color: inherit;
+}
+.listView .listViewRowWrapper {
+	border-radius: 8px 8px 8px 8px;
+	margin-bottom: 1.5em;
+}
+.listView tr.toggleCheckActive .listViewRowWrapper {
+	background-color: #CCFFFF;
+}
+.listView h4 {
+	background: #CCC url(../images/button_texture.png) repeat-x center center;
+	border-radius: 8px 8px 0 0;
+	border-top: 1px solid #BBB;
+	color: #333;
+	margin: 0;
+	padding: 0 .5em;
+}
+.listView h4 input[type=checkbox] {
+	margin-top: 0;
+}
+.listView h4 .inlineElements {
+	float: none;
+}
+.listView dt {
+	color: #888;
+	font-size: 120%;
+	font-weight: bold;
+	padding-top: .3em;
+}
+.listView .entryIntro {
+	float: left;
+	width: 15%;
+}
+.listView .entryIntro .inner {
+	border-right: 1px solid #EEE;
+	padding: .5em 1em;
+}
+.listView .category {
+	border-left: 1px solid #EEE;
+	float: left;
+	margin: 0 0 .5em -1px;
+	padding-left: 1%;
+	width: 84%;
+}
+.listView .categoryHead {
+	font-size: 120%;
+	font-weight: bold;
+	padding: .75em .25em;
+}
+.listView table {
+	border: none;
+	border-collapse: collapse;
+	box-shadow: none;
+	float: left;
+	width: auto;
+}
+.listView table th,
+.listView table td {
+	background: none;
+	border: none;
+	border-radius: 0;
+	color: #333;
+	padding: 0 1em;
+	text-align: left;
+	vertical-align: top;
+}
+.listView table th {
+	background-image: none;
+	border-bottom: 1px solid #CCC;
+	color: #777;
+	filter: none;
+}
+.listView thead {
+	display: none;
+}
+.listView .totals {
+	background: #B4F7B4;
+	font-weight: bold;
+}
+.listView .listViewActions {
+	background: #DEF;
+	border-bottom: 1px solid #8BE;
+	border-radius: 0 0 8px 8px;
+	clear: left;
+	padding: .5em;
+}
+.listView .listViewActions span {
+	font-weight: bold;
+	float: left;
+}
+.listView .listViewActions ul {
+	list-style: none;
+}
+.listView .listViewActions ul li {
+	display: inline;
+	margin-left: .5em;
+}
+.listViewWrapper .tableActionMenu {
+	margin-top: -1em;
+}
+/* [END] Table List View */
+
+/* [START] Box Shadows on various elements (IE9+, FF) */
+.successConsole,
+.warningConsole,
+.validationWarnings,
+.validationErrors,
+.errorConsole,
+.revealHead a,
+.revealHead a:link,
+.revealHead a:visited,
+.revealHead a:active,
+.footer#page-footer,
+.criteriaSet,
+.borderBox > .inner,
+fieldset > .inner,
+#pageActions,
+.dynamicTabContent,
+table,
+.tableActionMenu,
+.JS .inlineMenuBody,
+.calendar_date_selector,
+.tableBody {
+	border-width: 1px 2px 2px 1px;
+	box-shadow: 0 3px 5px #CCC;
+}
+.table-body-right {
+	border-width: 1px 2px 2px 0px !important;
+	box-shadow: 0 3px 5px #CCC !important;
+    border-radius: 0px 5px 5px 0px !important;
+}
+.table-body-middle {
+	border-width: 1px 0px 2px 0px !important;
+	box-shadow: 0 3px 5px #CCC !important;
+    border-radius: 0px !important;
+}
+.table-body-left {
+	border-width: 1px 0px 2px 1px !important;
+	box-shadow: 0 3px 5px #CCC !important;
+    border-radius: 5px 0px 0px 5px !important;
+}
+/* [END] Box Shadows */
+
+/* [START] Usability and Design Guides */
+.guideBox { /* Groups instructions like style guide rules and usability pattern references. Not to be used within delivered pages. */
+	border: 1px solid #F90;
+	border-radius: 5px;
+	clear: both;
+	color: #666;
+	float: none;
+	padding: .5em .5em 0 0;
+	margin-bottom: .75em;
+}
+.guideBox ul {
+	padding-bottom: .5em;
+}
+.styleGuide { /* Identifies styling rules in a project master sheet. Not to be used within delivered pages. */
+	background: url(../images/styleGuide_icon.gif) no-repeat;
+	display: block;
+	padding-left: 35px;
+	margin-bottom: .5em;
+}
+.styleGuide a { /* Places a link to the Ford Web Style Guide. Other links should not be used in this section. */
+	display: block;
+	padding-bottom: .5em; /* The links should always be at the top and aren't wrapped in another element, so spacing is needed. */
+}
+.usabilityPattern { /* Identifies links to usability patterns. Not to be used within delivered pages. */
+	background: url(../images/usabilityPattern_icon.gif) no-repeat;
+	display: block;
+	padding-left: 35px;
+	margin-bottom: .5em;
+}
+/* [END] Usability and Design Guides */
+
+/* [START] Utility Classes */
+/* Clear floats on various elements to correct FF height display issue */
+.criteriaSet:after,
+.section#page:after,
+.section:after,
+dl:after,
+.columnContainer:after,
+fieldset .inner:after,
+.inputContainer:after,
+fieldset ol:after,
+fieldset ol li:after,
+.dataControls:after,
+.inlineElements:after {
+	content: ".";
+	display: block;
+	float: none;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+/* Simulate the CSS3 pseudoclass ":last-child" and prevent unwanted vertical space */
+.lastChild {
+	padding-bottom: 0 !important;
+	margin-bottom: 0 !important;
+}
+.pageNote {
+	font-style: italic;
+}
+.inner { /* DO NOT assign styles directly to .inner - use container-specific selectors instead! */
+}
+.hidden {
+	height: 0;
+	width: 0;
+	display: block;
+	overflow: hidden;
+}
+.JS .jshidden {
+	display: none;
+}
+.textAlignC {
+	text-align: center;
+}
+.textAlignL {
+	text-align: left;
+}
+.textAlignR {
+	text-align: right;
+}
+.disabled {
+	background-color: #F0F0F0;
+	border: 1px solid #CCC;
+}
+.disabledLabel {
+	color: #999;
+}
+.displayTextList {
+	list-style: none;
+	float: left;
+	width: 100%;
+}
+.displayTextList li {
+	float: left;
+	width: 100%;
+}
+.JS body {
+	position: absolute;
+	width: 100%;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=15)";
+	filter: alpha(opacity=15);
+	opacity: 0.15;
+}
+.JS .loading_text {
+	background: url("../../FuilTestSuiteWeb/images/other/coverFlow/ajaxLoader.gif") no-repeat scroll 50% 0 transparent;
+	margin: 0 auto;
+	padding: 100px 0;
+	position: absolute;
+	text-align: center;
+	top: 45%;
+	width: 100%;
+	z-index: 10000;
+}
+
+
+
+
+
+/* [END] Utility Classes */
+
+/* add new classes here */
+.revealBody .formButtonsSm {
+    margin-bottom:-.5em;
+}
+.demo-hidden {
+    visibility: hidden;
+}

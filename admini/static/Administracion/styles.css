@@ -1,0 +1,23 @@
+ 
+|h1, h2 {
+  /* color: green; */
+  font-size: 40px;
+}
+
+td {
+  border-spacing: 5px;
+}
+table {
+  border-spacing: 5px;
+  border-color: #808080;
+  /* border-style: dashed; */
+  
+}
+
+.warning {
+  color:red;
+  font-size: medium;
+}
+
+
+

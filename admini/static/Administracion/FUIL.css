@@ -1,0 +1,883 @@
+/*
+Ford User Interface Library (FUIL) Cascading Style Sheet (CSS)
+Important Notes:
+	- This file should only be modified by the Web COE
+	- Per project/application customization of the styles defined below should be overridden in styles.css by CDU
+*/
+
+/* [START] AJAX  */
+#sah {
+	border: none;
+	height: 0;
+	overflow: hidden;
+	position: absolute;
+	width: 0;
+}
+#sah_history {
+	display: none;
+	height: 0;
+	position: absolute;
+	width: 0;
+}
+/* [END] AJAX  */
+
+/* [START] AutoComplete */
+.autocompletePopup {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-bottom: 0px;
+	border-bottom: 1px solid #ccc;
+	left: 0px;
+	position: absolute;
+	top: 20px;
+	width: 200px;
+	z-index: 1000;
+}
+.autocompletePopup .autocompleteSuggestion,
+.autocompletePopup:hover .currentSuggestion { /* Normal suggestion, and arrow-selected suggestion when using mouse */
+	background-color: #fff;
+	color: #333;
+	cursor: pointer;
+	font-size: 11px;
+	font-weight: normal;
+	overflow: hidden;
+	padding: 2px;
+	text-overflow: ellipsis;
+}
+.autocompletePopup .currentSuggestion,
+.autocompletePopup .autocompleteSuggestion:hover { /* arrow-selected suggestion without mouse, mouse hovered suggestion */
+	background-color: #CFF;
+	color: #339;
+	font-weight: bold;
+}
+/* [END] AutoComplete */
+
+/* [START] FormValidator */
+/* Used to indicate in error condition. */
+.errorConsole li.error,
+.errorConsole li.error a:link,
+.errorConsole li.error a:visited,
+.validationErrors li.error,
+.validationErrors li.error a:link,
+.validationErrors li.error a:visited,
+label.error,
+label.error a:link,
+p.error,
+p.error a:link,
+fieldset legend.error span,
+fieldset legend.error span a:link,
+fieldset fieldset legend.error span,
+fieldset fieldset legend.error span a:link {
+	color: #F00;
+	font-weight: bold;
+}
+/* Used to indicate the error condition has cleared, or field is valid. */
+.errorConsole li.validated,
+.validationErrors li.validated {
+	color: #666;
+	text-decoration: line-through;
+}
+/* Hide error console during page load. */
+.JS .validationWarnings,
+.JS .validationErrors {
+	display: none;
+}
+/* [END] FormValidator */
+
+/* [START] InlineMenu */
+.JS .inlineMenuTrigger {
+	display: inline-block;
+}
+.JS .inlineMenuTrigger span { /* with JavaScript */
+	color: #555;
+	cursor: pointer;
+	display: block;
+	font-weight: bold;
+	padding: 2px 22px 2px 2px;
+	text-align: left;
+}
+.JS tr.inlineMenuActiveRow .inlineMenuTrigger,
+.inlineMenuTriggerWrapper a.active {
+	position: relative;
+	z-index: 1000;
+}
+.JS dl.inlineMenuTriggerWrapper > dd > a.active {
+	position: absolute;
+    margin-top: 1px;
+}
+.JS dl.inlineMenuTriggerWrapper > dd > a {
+    margin-left: .5em;
+}
+.JS tr.inlineMenuActiveRow .inlineMenuTrigger span,
+.inlineMenuTriggerWrapper a.active span {
+	background: url(../images/menu_pointer_on.gif) 90% 50% no-repeat;
+	color: #333;
+}
+.JS .inlineMenuBody { /* with JavaScript */
+	background: #FFC;
+	border-color: #CC9 #885 #885 #AA7;
+	border-radius: 0 5px 5px;
+	border-style: solid;
+	display: none;
+	list-style: none;
+	list-style-image: none;
+	overflow: hidden;
+	padding-left: 0;
+	position: absolute;
+	text-align: left;
+	width: 20em;
+	z-index: 100;
+}
+.inlineMenuBody li.active {
+	background-color: #CCF;
+}
+/* Background color for active row highlighting */
+tr.inlineMenuActiveRow td {
+	background-color: #FFC;
+}
+li.inlineMenuListActive {
+	background-color: #FFF;
+	margin: 0;
+	padding: 0.5em;
+}
+.inlineMenuBody li {
+	margin: 0;
+	padding: .3em .5em;
+}
+.inlineMenuBody li a {
+	display: block;
+}
+/* FUIL 1.1 compatibility */
+.JS .inlineMenuContainer {
+	margin-top: 1.2em;
+	z-index: 100;
+}
+/* [END] InlineMenu */
+
+/* [START] MultiSelect */
+.multiSelect {
+	margin: 0 auto;
+	width: 500px;
+}
+.multiSelect fieldset {
+	clear: none;
+}
+.multiSelect_selections {
+	background: url(../images/FUIL/multiselectArrow.png) no-repeat 50% 50%;
+	float: left;
+	width: 100%;
+}
+.multiSelect_available {
+	float: left;
+	margin-top: 1em;
+}
+.multiSelect_selected {
+	display: none;
+	float: right;
+	margin-top: 1em;
+}
+.JS .multiSelect_selected {
+	display: block;
+}
+.multiSelect_selectAll {
+	display: none;
+	margin-bottom: .5em;
+}
+.JS .multiSelect_selectAll {
+	display: block;
+}
+.multiSelect_removeAll {
+	display: block;
+	margin-bottom: .5em;
+}
+.multiSelect legend span,
+.multiSelect .formControlsVertical legend span,
+.multiSelect div.legend {
+	color: #000;
+	position: relative;
+	text-align: left;
+	white-space: nowrap;
+}
+.multiSelect legend span.formRequiredIndicator {
+	color: red;
+}
+.multiSelect ol,
+.checkBoxContainer ol {
+	background: #FFF;
+	border: 1px solid #CCC;
+	border-radius: 5px;
+	height: 100px;
+	overflow: hidden;
+	overflow-y: scroll;
+	padding: .25em;
+	width: 200px;
+}
+.multiSelect .filter {
+	margin: 1em 0 0 0;
+	width: 100%;
+}
+.multiSelect_remove {
+	background: url(../images/FUIL/multiselectDelete.gif) no-repeat;
+	display: block;
+	float: left;
+	height: 13px;
+	padding-right: .25em;
+	text-indent: -1000em;
+	width: 13px;
+}
+.multiSelect li {
+	float: none;
+}
+/* [END] MultiSelect */
+
+/* [START] Multi-Select Enhanced */
+.multiSelect_availableWrapper {
+	float: left;
+	margin-top: 1em;
+}
+.multiSelect_selectedWrapper {
+	display: none;
+	float: right;
+	margin-top: 1em;
+}
+.JS .multiSelect_selectedWrapper {
+	display: block;
+}
+.multiSelect_availableWrapper .multiSelect_available label {
+	display: block;
+	margin-left: 20px;
+	padding: auto 0;
+}
+.multiSelect_availableWrapper .multiSelect_available input {
+	clear: left;
+	float: left;
+	height: 15px;
+	width: 15px;
+}
+.multiSelect_selectedWrapper .multiSelect_selected label {
+	background: transparent url(../images/FUIL/multiselectDelete.gif) left top no-repeat;
+	clear: both;
+	display: none;
+	float: left;
+	padding-left: 20px;
+	width: 100%;
+	zoom: 1;
+}
+.multiSelect_selectedWrapper .multiSelect_selected label.multiSelect_noSelection {
+	padding-left: 5px;
+	background: none;
+}
+.multiSelect_availableWrapper .multiSelect_available,
+.multiSelect_selectedWrapper .multiSelect_selected {
+	background: #FFF;
+	border: 1px solid #AAA;
+	border-radius: 3px;
+	clear: none;
+	float: left;
+	height: 100px;
+	margin: 0.25em 0;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	padding: 0.25em;
+	width: 200px;
+}
+.multiSelect_intermediaryWrapper {
+	border: none !important;
+	margin-top: 4em;
+}
+.multiSelect_withIntermediary {
+	margin: 0 auto;
+	width: 655px;
+}
+.multiSelect_withIntermediary .multiSelect_selections {
+	background-image: none;
+}
+.multiSelect_criteriaSet {
+	background: none;
+	border: none;
+	padding: 0em;
+}
+.multiSelect_labelPadding {
+	margin-top: 0.25em;
+}
+/* [END] Multi-Select Enhanced */
+
+/* [START] NavMenu */
+/* COLORS in the NavMenu are set in styles.css */
+#navPrimaryWrapper {/* wrapper div for NavMenu */
+	position: relative;
+	z-index: 1;
+}
+/* clears floats to correct height display issue in FF */
+#navPrimaryWrapper:after,
+#nav:after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+#nav {/* unordered list with nav id in NavMenu component */
+	padding-left: 0;
+}
+#nav a#tab01 {
+	border-top-right-radius: 0 !important;		/* square the right-side corners on first "tab" (set border radius is in styles.css) */
+	border-bottom-right-radius: 0 !important;
+}
+#nav li {/* 1st level and below list items in NavMenu */
+	float: left;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#nav a:link,
+#nav a:visited {/* 1st level and below links in NavMenu */
+	display: block;
+	margin: 0;
+	padding: 10px 16px;
+	text-decoration: none;
+}
+#nav > li.sfexpandable > a {/* 1st level styles for items with submenus (expandable) */
+	padding-right: 24px;
+}
+#nav li:hover > ul,
+#nav li.sfhover > ul {/* expand 2nd level and below */
+	display: block;
+	z-index: 2;
+}
+#nav ul {/* 2nd level and below lists in NavMenu */
+	display: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	width: 12em;
+}
+#nav ul li {/* 2nd level and below list items in NavMenu */
+	float: none;
+	margin: 0;
+	position: relative;
+}
+#nav ul a:link,
+#nav ul a:visited {/* 2nd level and below links in NavMenu */
+	padding: 3px 12px;
+}
+#nav ul.sfCollision {/* 2nd level and below when colliding with edge of window */
+	margin-left: -5em;
+}
+#nav ul ul {/* 3rd level and below lists in NavMenu */
+	left: 10.9em;
+	top: 0;
+}
+#nav ul ul.sfCollision,
+#nav ul ul.sfCollision ul {/* 3rd level and below when colliding with edge of window */
+	left: -12em;
+	margin-left: 0;
+}
+/* [END] NavMenu */
+
+/* [START] Overlay */
+.overlay_wrapper {
+	height: 100%;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	z-index: 10000;
+}
+.overlay_screen {
+	/*background-color:#000;*/
+	float: left;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.overlay_content {
+	background: #FFF;
+	border: 5px solid #346;
+	border-radius: 9px;
+	box-shadow: 0 0 200px #333;
+	padding: 1em 1.75em 0 1.75em; /* The bottom padding comes from the combination of the .section and .subsection divs within. */
+	position: absolute;
+	text-align: left;
+}
+/* Progress Bar */
+.overlay_progress {
+	display: none;
+}
+.overlay_progress_content {
+	text-align: center;
+}
+#pbPercent {
+	margin: 0 auto;
+	margin-top: 10px;
+	text-align: center;
+}
+#pbBorder {
+	border: 1px solid #666666;
+	height: 10px;
+	margin: 10px auto;
+	padding: 1px;
+	width: 250px;
+}
+#pbBar {
+	background: url(../images/custom/buttonPrimary.gif) repeat-x top #003399;
+	float: left;
+	height: 100%;
+	width: 1px;
+}
+/* Form Post Loading message (uses Overlay invoked by FormManager, but not Ajax) */
+.overlay_loading {
+	display: none;
+}
+.overlay_loading_content {
+	text-align: center;
+}
+/* Indicates small element is updating */
+.ajaxLoadingIndicator {
+	background: url(../images/loadingIndicator_small.gif) no-repeat 0 0;
+	display: inline-block;
+	height: 0;
+	overflow: visible;
+	padding: 10px;
+	vertical-align: top;
+}
+/* indicates ajax content (inc overlay) is loading */
+.ajaxLoadingContent {
+	width: 400px; /* like smOverlay */
+}
+/* Inline Overlay */
+.extractInlineOverlay {
+	display: none;
+}
+/* Standard Overlay Sizes */
+.smOverlay {
+	width: 400px;
+}
+.mdOverlay {
+	width: 700px;
+}
+/* [END] Overlay */
+
+/* [START] Reorderable */
+.reorderableWrapper {
+	position: relative; /* used for drag'n'drop */
+}
+.reorderableSeparatorElement {
+	border: none;
+	height: 20px;
+}
+/* [END] Reorderable */
+
+/* [START] Reveal classes */
+*[class*='revealTrigger'] {
+	display: block;
+}
+.revealWrapper input[type=radio] {
+	display: inline !important;
+}
+*[class*='revealTrigger'] .show {
+	display: block;
+}
+*[class*='revealTrigger'] .hide {
+	display: none;
+}
+*[class*='revealTrigger'].revealActive .show {
+	display: none;
+}
+*[class*='revealTrigger'].revealActive .hide {
+	display: block;
+}
+
+.revealBody {
+    overflow: hidden;
+}
+*[class*='revealBody'] > .inner {
+	border-color: #CCC;
+	border-radius: 0 0 5px 5px;
+	border-style: solid;
+	border-width: 0 2px 2px 1px;
+}
+.JS *[class*='revealBody'] { /* collapse body content on page load if JS is running */
+	display: block;
+	height: 0;
+}
+.JS *[class*='revealBody'].revealActive { /* allow automatic height adjustment */
+	height: auto;
+}
+/* collapse body content on page load if JS is running */
+.JS .revealBody {
+	display: block;
+	height: 0;
+}
+/* allow automatic height adjustment */
+.JS .revealBody.revealActive {
+	height: auto;
+}
+/* allows tab content to load fully expanded */
+.JS .revealStartOpen {
+	height: auto;
+}
+/* a hidden area for "fake" revealBodyPlaceholer divs */
+.revealBodyPlaceholderContainer {
+	display: none;
+}
+
+.accordion {
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 0 3px 5px #CCCCCC;
+	border-width: 1px 2px 2px 1px;
+	border-style: solid;
+	border-color: #CCCCCC;
+	overflow: hidden;
+}
+.accordion .revealHead .revealTrigger,
+.accordion .revealBody .inner {
+	border-width: 1px 0 0 0;
+	box-shadow: none !important;
+	border-radius: 0 0 0 0 !important;
+}
+.accordion li:first-child .revealHead .revealTrigger {
+	border-width: 0;
+}
+.accordion .revealBody .inner {
+	padding: 1em;
+}
+
+/* [END] Reveal */
+
+/* [START] TableExtensions */
+.editableTableFieldsRow {
+	background-color: #3F6A95;
+	border-bottom: 1px solid #3F6A95;
+	border-top: 4px solid #3F6A95;
+	border-left: 13px solid #3F6A95;
+	border-right: 13px solid #3F6A95;
+	height: 24px;
+}
+.editableTableFieldsRow td {
+	background: #3F6A95;
+	border-bottom: 2px solid #3F6A95;
+	border-left: 1px solid #3F6A95;
+	border-right: 1px solid #3F6A95;
+}
+.editMode table,
+.editMode tbody {
+	box-shadow: none;
+}
+.editMode th {
+	background-color: #666666;
+	border-color: #666666;
+}
+.editMode .tableActionMenu {
+	margin-top: -0.25em;
+}
+.editableTableFieldsRow input {
+	width: 90%;
+}
+.editableTableFieldsRow input.calendar_date_selector_field {
+	width: 60%;
+}
+.editableTableFieldsRow .formRequiredIndicator {
+	padding: 1px;
+}
+.editableTableActionIndicator {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.wrapLeft {
+	border-left: 6px solid transparent;
+	border-top: 10px solid #1B2D40;
+	height: 0;
+	width: 0;
+}
+.wrapRight {
+	border-right: 6px solid transparent;
+	border-top: 10px solid #1B2D40;
+	height: 0;
+	width: 0;
+}
+.editableTableEditIndicator {
+	padding: 0 0 0 25px;
+}
+span.editableTableEdited {
+	background: url(../images/FUIL/edit.gif) no-repeat 0 0;
+	display: inline-block;
+	margin: 0 8px 0 -23px;
+	width: 15px;
+}
+span.editableTableNew {
+	background: url(../images/FUIL/new.gif) no-repeat 0 0;
+	display: inline-block;
+	margin: 0 8px 0 -23px;
+	width: 15px;
+}
+.status_new td,
+.status_edited td,
+.altRow.status_new td,
+.altRow.status_edited td{
+	background-color: #FFFFA5;
+}
+
+.editableTableTab {
+	background-color: #3F6A95;
+	border-left: 1px solid #3d3d3d;
+	border-right: 1px solid #3d3d3d;
+	border-bottom: 1px solid #3d3d3d;
+	border-radius: 0 0 5px 5px;
+	padding: 3px 4px 4px;
+}
+.editableTableTab input {
+	border: 1px solid #FFFFFF;
+	margin-top: 2px;
+}
+.editableTableErrorConsole {
+	background: url(../images/alert_error.gif) no-repeat 10px .5em #f2f2f2;
+	color: #ff4f4f;
+	padding: 15px 10px 7px 18px;
+}
+.editableTableTab .alert {
+	border: 1px solid #CCC;
+	font-weight: bold;
+	margin: 0 0 2em 0;
+	min-height: 20px;
+	padding: 1em 1em 1em 35px;
+}
+/* scrolling table pieces */
+/* structure things... */
+.tableHeader {
+	margin-right: 16px;
+}
+.tableHeader table {
+	border-width: 1px 0 0 1px;
+	margin: 0;
+	table-layout: fixed;
+	width: 100%;
+}
+.tableHeader th {
+	border-right: 1px solid #CCC;
+}
+.tableBody {
+	border: 1px solid #CCC;
+	height: 150px;
+	margin-bottom: .5em;
+	overflow-x: auto;
+	overflow-y: scroll;
+	width: 100%;
+}
+.tableBody table {
+	border: none;
+	box-shadow: none;
+	margin: 0;
+	table-layout: fixed;
+	width: 100%;
+}
+.tableBody td:last-child {
+	border-right: none;
+}
+/* tree table pieces */
+.treeTable .level1 td {
+	padding-left: 1.5em;
+}
+.treeTable .level2 td {
+	padding-left: 2.5em;
+}
+.treeTable .level3 td {
+	padding-left: 3.5em;
+}
+.treeTable .level4 td {
+	padding-left: 4.5em;
+}
+.treeTable .level5 td {
+	padding-left: 5.5em;
+}
+.treeTable .level6 td {
+	padding-left: 6.5em;
+}
+.treeTable .level7 td {
+	padding-left: 7.5em;
+}
+.treeTable .level8 td {
+	padding-left: 8.5em;
+}
+.treeTable .level9 td {
+	padding-left: 9.5em;
+}
+.treeTable .level10 td {
+	padding-left: 10.5em;
+}
+.treeTable .col1 {
+	width: 7%;
+}
+.treeTable .col2 {
+	width: 24%;
+}
+.treeTable .col3 {
+	width: 30%;
+}
+.treeTable .col4 {
+	width: 19%;
+}
+.treeTable .col5 {
+	width: 20%;
+}
+/* styles for the expand icons */
+.treeTable td span {
+	padding-left: 20px;
+}
+.treeTable .expander {
+	background: url("../images/FUIL/plus.gif") no-repeat scroll left center transparent;
+}
+.treeTable .expanded .expander {
+	background: url("../images/FUIL/minus.gif") no-repeat scroll left center transparent;
+}
+.treeTable .expander:hover {
+	background-color: #ADD8E6;
+	cursor: pointer;
+}
+.treeTable .hiddenRow {
+	display: none;
+}
+/* [END] TableExtensions */
+
+/* [START] ToggleAttributes */
+.toggleAttributes ol {
+    list-style: none;
+    margin-left: 10px;
+}
+.radioSub {
+    list-style: none;
+    margin-left: 10px;
+}
+/* [END] ToggleAttributes */
+
+/* [START] ToggleCheckAll */
+/* highlights selected row when used in a table */
+tr.toggleCheckActive td {
+	background-color: #CFF;
+}
+/* [END] ToggleCheckAll */
+
+/* [START] Tooltips */ 
+/* uses 'polygonal css' to create triangle pointers without images */
+.tooltip_body .pointerRight {
+	border-left: 8px solid #94B8DC; 
+	border-right: 0;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	height: 0;
+	position: absolute;
+	width: 0;
+	z-index: 1001;
+}
+.tooltip_body .pointerRightInner {
+	border-left: 8px solid #EFF4FA; 
+	border-right: 0;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	height: 0;
+	position: absolute;
+	width: 0;
+	z-index: 1002;
+}
+.tooltip_body .pointerLeft {
+	border-left: 0; 
+	border-right: 8px solid #94B8DC;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	height: 0;
+	position: absolute;
+	width: 0;
+	z-index: 1001;
+}
+.tooltip_body .pointerLeftInner {
+	border-left: 0; 
+	border-right: 8px solid #EFF4FA;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	height: 0;
+	position: absolute;
+	width: 0;
+	z-index: 1002;
+}
+.tooltip_body .pointerUp {
+	border-left: 5px solid transparent; 
+	border-right: 5px solid transparent;
+	border-top: 0;
+	border-bottom: 8px solid #94B8DC;
+	height: 0;
+	position: absolute;
+	width: 0;
+	z-index: 1001;
+}
+.tooltip_body .pointerUpInner {
+	border-left: 5px solid transparent; 
+	border-right: 5px solid transparent;
+	border-top: 0;
+	border-bottom: 8px solid #EFF4FA;
+	height: 0;
+	position: absolute;
+	width: 0;
+	z-index: 1002;
+}
+.tooltip_body .pointerDown {
+	border-left: 5px solid transparent; 
+	border-right: 5px solid transparent;
+	border-top: 8px solid #94B8DC;
+	border-bottom: 0;
+	height: 0;
+	position: absolute;
+	width: 0;
+	z-index: 1001;
+}
+.tooltip_body .pointerDownInner {
+	border-left: 5px solid transparent; 
+	border-right: 5px solid transparent;
+	border-top: 8px solid #EFF4FA;
+	border-bottom: 0;
+	height: 0;
+	position: absolute;
+	width: 0;
+	z-index: 1002;
+}
+.tooltip_body {
+	background: #EFF4FA;
+	border: 1px solid #94B8DC;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	font-size: 11px;
+	padding: 4px 4px 1px 4px;
+	padding: .5em;
+	text-align: left;
+	z-index: 1000;
+	/* css3 rounded corners */
+}
+/* tooltip links */
+a.tooltip, 
+a.tooltip:link, 
+a.tooltip:visited, 
+a.tooltip:active, 
+a:hover.tooltip {
+	border-bottom: 1px dashed;
+	display: inline-block;
+	font-size: .9em;
+	margin-bottom: .3em;
+	text-decoration: none;
+}
+.infoTooltip a.tooltip,
+.infoTooltip a.tooltip:link,
+.infoTooltip a.tooltip:visited,
+.infoTooltip a.tooltip:active {
+	border-bottom: none;
+	margin: 1px;
+}
+/* hide the tooltip_body on page load */
+.JS .tooltip_body {
+	display: none;
+}
+/* [END] Tooltips */
+
+/* add new classes here */
