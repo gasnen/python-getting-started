@@ -5,6 +5,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 import hello.views
+import admini.views
 
 # To add a new path, first import the app:
 # import blog
@@ -19,4 +20,5 @@ urlpatterns = [
     # path("administracion", administracion.views.index, name="index"),
     path("db/", hello.views.db, name="db"),
     path("admin/", admin.site.urls),
+    path("page/", admini.views.index),
 ]
