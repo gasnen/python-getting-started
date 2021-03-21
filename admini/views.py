@@ -45,5 +45,5 @@ def index(request):
         menuarr=[]
         menuarr=Menucreator.createmenu(False)
     print(menuarr)
-    return render(request, 'index.html',{"menu":menuarr,}
+    return render(request, 'index2.html',{"menu":menuarr,}
                                                        )
