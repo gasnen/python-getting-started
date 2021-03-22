@@ -20,10 +20,7 @@ from django.conf.urls import include
 from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('',views.index,name="index"),
-    path('usera',views.userinfo,name="user"),
-    path('accounts/', include('allauth.urls')),
     path('accounts/google/login/callback/',views.index),
      path('logout',views.lout),
 ]

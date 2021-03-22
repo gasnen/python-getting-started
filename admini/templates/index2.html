@@ -1,5 +1,9 @@
+
 {% extends "base.html" %}
+{% load static %}
 {%block a%}
-{{ret}}
-aaa
+<h1 Style="alignment:center">Administracion Perro armenio</h1>
+<img src="{% static 'Administracion/images.jfif' %}"/>
+<h1><span>{{message}}</span></h1>
+
 {%endblock%}

@@ -41,9 +41,11 @@ def index(request):
         menuarr=[]
         print("create menu")
         menuarr=Menucreator.createmenu(True)
+        msg="Seleccione una opcion del menu"
     else:  
         menuarr=[]
         menuarr=Menucreator.createmenu(False)
+        msg="Para continuar debe Ingresar a su cuenta"
     print(menuarr)
-    return render(request, 'index2.html',{"menu":menuarr,}
+    return render(request, 'index2.html',{"menu":menuarr,"message":msg}
                                                        )

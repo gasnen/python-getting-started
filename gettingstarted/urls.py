@@ -16,9 +16,12 @@ import admini.views
 # Learn more here: https://docs.djangoproject.com/en/2.1/topics/http/urls/
 
 urlpatterns = [
-    path("", hello.views.index, name="index"),
+    # path("", hello.views.index, name="index"),
+    path("", include("admini.urls"), name="index"),
     # path("administracion", administracion.views.index, name="index"),
     path("db/", hello.views.db, name="db"),
     path("admin/", admin.site.urls),
-    path("page/", admini.views.index),
+    path("page/", include("admini.urls")),
+    path('accounts/', include('allauth.urls')),
+    path('accounts/google/login/callback/', include("admini.urls")),
 ]
